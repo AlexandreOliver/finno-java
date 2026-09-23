@@ -1,6 +1,6 @@
 # Finno
 
-Sistema de Gestão Financeira Pessoal. Projeto de portfólio construído com Java 21, Spring Boot e Thymeleaf.
+API REST para Sistema de Gestão Financeira Pessoal. Projeto de portfólio construído com Java 21 e Spring Boot.
 
 > Esse Projeto é uma implementação em java do [finno](https://github.com/AlexandreOliver/finno)
 
@@ -13,7 +13,6 @@ Sistema de Gestão Financeira Pessoal. Projeto de portfólio construído com Jav
 - **Linguagem:** Java 21
 - **Framework:** Spring Boot 4.1.0
 - **Persistência:** Spring Data JPA + PostgreSQL
-- **View (web):** Thymeleaf
 - **Build:** Maven
 - **Ambiente local:** Docker Compose (PostgreSQL)
 
