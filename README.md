@@ -18,6 +18,33 @@ API REST para Sistema de Gestão Financeira Pessoal. Projeto de portfólio const
 
 ---
 
+## Arquitetura
+
+O código atual está organizado em `domain`, `application` e `infrastructure`.
+
+```
+api.financas
+ ├─ FinancasApplication.java
+ ├─ application/        → Casos de Uso, Serviços e Orquestração
+ ├─ domain/
+ │   ├─ entities/       → modelos de domínio
+ │   ├─ valueobject/    → Objetos de valor que encapsulam logicas uteis
+ │   └─ interfaces/     → contratos do domínio
+ └─ infrastructure/
+     ├─ http/
+     │   └─ controllers/  → endpoints REST (LoginController)
+     └─ persistence/
+         ├─ entities/   → entidades JPA
+         ├─ jpa/        → acesso ao banco e implementações dos repositorios
+         └─ UserMapper.java
+```
+
+### Decisões de arquitetura relevantes
+
+- **Migrações**: Banco de dados versionado usando Flyway para garantir integridade
+
+---
+
 ## Como rodar localmente
 
 ```bash
