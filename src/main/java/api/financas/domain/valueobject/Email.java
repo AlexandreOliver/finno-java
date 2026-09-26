@@ -13,5 +13,9 @@ public record Email(String value) {
       throw new IllegalArgumentException("Email inválido");
     }
   }
+
+  public static Email of(String value) {
+    return new Email(value);
+  }
 }
 

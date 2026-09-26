@@ -1,11 +1,14 @@
 package api.financas.domain.interfaces;
 
 import api.financas.domain.entities.User;
+import api.financas.domain.valueobject.Email;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface IUserRepository {
-  void save(User user);
-  void delete(User user);
+  User save(User user);
+  void delete(UUID id);
   List<User> findAll();
+  boolean existsByEmail(Email email);
 }

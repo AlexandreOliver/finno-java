@@ -22,7 +22,7 @@ public class UserMapper {
   public static User mapper(UserEntity entity) {
     return User.builder()
         .id(entity.getId())
-        .email(new Email(entity.getEmail()))
+        .email(Email.of(entity.getEmail()))
         .password(new PasswordHash(entity.getPassword()))
         .name(entity.getName())
         .createdAt(entity.getCreatedAt())
